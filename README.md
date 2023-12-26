@@ -1,66 +1,28 @@
-## Foundry
+# Foundry ERC20 EXAMPLE
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Getting Started
+### Requirments
+- git
+    - You'll know you did it right if you can run ```git --version``` and you see a response like ```git version x.x.x```
+- foundry
+    - You'll know you did it right if you can run ```forge --version``` and you see a response like ```forge 0.2.0 (7b45265 2023-11-21T00:22:00.899582254Z))```
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
+### Quickstart
+```
+git clone https://github.com/Jaunepr/ERC20-foundry
+cd foundry-erc20-f23
+forge install 
+forge build
+```
 
 ## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
+### OpenZeppelin
+#### Install OpenZeppelin Contracts Package
+```forge install OpenZeppelin/openzeppelin-contracts --no-commit```
+### Start a local node
+```make anvil```
 ### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This will default to your local node. You need to have it running in another terminal in order for it to deploy.
+```make deploy```
+### Test
+```forge test```
